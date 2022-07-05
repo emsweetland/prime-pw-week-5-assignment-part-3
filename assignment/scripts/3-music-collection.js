@@ -55,6 +55,58 @@ function findByArtist(artist){
     }   
 }
 
-// - Test the `findByArtist` function. Make sure to test with an artist you know is in the collection, as well as an artist you know is not in your collection. Check that for artists with multiple matches, all are found.
+// - Test the `findByArtist` function. Make sure to test with an artist you know 
+//   is in the collection, as well as an artist you know is not in your collection. 
+//   - Check that for artists with multiple matches, all are found.
 findByArtist('ye')
 findByArtist('soad')
+
+
+
+// ### Stretch goals
+
+// - Create a function called `search`. This function should:
+//   - Take an input parameter for a search criteria object. Create your solution based on a search object that has these properties:
+//   ```
+//   { artist: 'Ray Charles', year: 1957 }
+//   ```
+//   - The returned output from `search` should meet these requirements:
+//     - Return a new array of all items in the `collection` matching *all* of the search criteria.
+//     - If no results are found, return an empty array.
+//     - If there is no search object or an empty search object provided as input, then return all albums in the `collection`.
+
+function search(artist, yearPublished){
+    results=[];{
+        if (artist == undefined && yearPublished == undefined){
+            console.log(collection)}
+        else {
+            for(album of collection){
+                if (artist == album.artist && yearPublished == album.yearPublished){
+                    results.push(album);}
+                else if (artist !== album.artist || yearPublished !== album.yearPublished){
+                    results.push();}
+            } 
+        console.log('results',results)}
+    }
+}
+
+search('ray charles', 1957);
+search('ye', 2013);
+search();
+
+// - Add an array of `tracks` to your album objects. Each track should have a `name` and `duration`. 
+//      You will need to update the functions to support this new property:
+//   - Update the `addToCollection` function to also take an input parameter for the array of tracks.
+//   - Update `search` to allow a `trackName` search criteria.
+//   - Update the `showCollection` function to display the list of tracks for each album with its name and duration.
+// ```
+//     TITLE by ARTIST, published in YEAR:
+//     1. NAME: DURATION
+//     2. NAME: DURATION
+//     3. NAME: DURATION
+//     TITLE by ARTIST, published in YEAR:
+//     1. NAME: DURATION
+//     2. NAME: DURATION
+// ```
+
+
